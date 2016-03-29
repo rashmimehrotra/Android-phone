@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#244463"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_pattern"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#FF0000"
+            android:id="@+id/top_layout"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/courseName_text"
+                android:text="B - III Biology (Room:24)"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="15dp"
+                android:textSize="18sp"
+                android:layout_marginTop="3dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/startsinabout_timer"
+                android:layout_below="@+id/courseName_text"
+                android:layout_centerHorizontal="true"
+                android:text="Class not started"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="5dp"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/questionStatement_layout"
+            android:layout_below="@+id/top_layout"
+            android:layout_marginTop="30dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/topic_textview"
+                android:text="Topic/Question"
+                android:textColor="#ffffff"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/topicStatement_textview"
+                android:text="No Topic Selected"
+                android:textColor="#ffffff"
+                android:textSize="19sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionStatement_textview"
+                android:text="No Active Question"
+                android:lines="2"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:scrollbars="vertical"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:id="@+id/waitingMessageLayout"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Waiting for teacher to begin."
+                android:textColor="#ffffff"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="This class will start shortly."
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="#ffffff"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/gettingNotGettingLayout"
+            android:layout_marginBottom="15dp"
+            android:visibility="gone"
+            >
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_getting"
+                android:layout_marginLeft="20dp"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_disabled_thumb_up_white"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/thumb_up_image"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="true"
+                    android:text="Getting it"
+                    android:layout_toRightOf="@+id/thumb_up_image"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#394B5C"
+                    android:id="@+id/text_Getting"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_notGetting"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Getting it"
+                    android:textColor="#394B5C"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:id="@+id/text_notGetting"
+                    android:textAllCaps="true"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_disabled_thumb_down_white"
+                    android:layout_toLeftOf="@+id/text_notGetting"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/thumb_down_image"
+                    android:layout_marginRight="8dp"
+                    />
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="#2E5880"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="35dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/rl_activityAndGrasp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/ll_activity"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/activity_indicator_img"
+                    android:src="@drawable/speedometer_zero"
+                    />
+                <TextView
+                    android:id="@+id/activity_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Activity"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#ffffff"
+                    android:textAllCaps="true"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:id="@+id/ll_graspIndex"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/graspIndex_indicator_img"
+                    android:src="@drawable/speedometer_zero"
+                    />
+                <TextView
+                    android:id="@+id/graspIndex_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Grasp Index"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#ffffff"
+                    android:textAllCaps="true"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

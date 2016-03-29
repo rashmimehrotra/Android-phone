@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#244463"
+    android:id="@+id/parent_layout"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_pattern"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        >
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/app_logo"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/center_view"
+            android:layout_centerInParent="true"
+            />
+
+        <com.app.learniatstudent.Views.RobotoRegularEditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/username_edittext"
+            android:layout_above="@+id/center_view"
+            android:inputType="textNoSuggestions|text"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Username"
+            android:textCursorDrawable="@null"
+            android:textColorHint="#CDD4DA"
+            android:textSize="16sp"
+            android:textColor="@drawable/edit_text_selector"
+            android:textColorHighlight="#ffffff"
+            android:background="@drawable/edittextdrawable"
+            />
+
+        <com.app.learniatstudent.Views.RobotoRegularEditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/password_edittext"
+            android:layout_below="@+id/center_view"
+            android:inputType="textPassword"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:hint="Password"
+            android:textColorHint="#CDD4DA"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            android:textColor="@drawable/edit_text_selector"
+            android:textColorHighlight="#ffffff"
+            android:background="@drawable/edittextdrawable"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/btn_signin"
+            android:layout_below="@+id/password_edittext"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/white_round_bg"
+            android:text="Sign In"
+            android:textColor="#244463"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+            android:shadowRadius="5"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/btn_JFS"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/btn_signin"
+            android:background="@drawable/green_round_bg"
+            android:text="Sign Up"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+            android:shadowRadius="5"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

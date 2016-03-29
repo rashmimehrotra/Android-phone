@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/topBarLayout"
+    android:background="#2E5880"
+    >
+    <Button
+        android:id="@+id/menuButton"
+        android:layout_width="28dp"
+        android:layout_height="17dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/menuicon"
+        />
+
+    <Button
+        android:id="@+id/menuButton1"
+        android:layout_width="55dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        />
+
+    <Button
+        android:id="@+id/menuBackButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/backbutton"
+        android:visibility="gone"
+        />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/course_icon_img1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/menuButton1"
+        android:layout_marginLeft="15dp"
+        android:visibility="gone"
+        />
+    <com.app.learniatstudent.Views.RobotoRegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tob_bar_title"
+        android:gravity="center|left"
+        android:text="Student App"
+        android:textColor="#ffffff"
+        android:paddingLeft="10dp"
+        android:textSize="20sp"
+        android:layout_toRightOf="@+id/course_icon_img1"
+        />
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:id="@+id/question_dashboard_menuitems"
+        android:visibility="invisible"
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="12dp"
+            android:id="@+id/question_answer_icon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_question_answer_white"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="12dp"
+            android:id="@+id/question_help_icon"
+            android:layout_toLeftOf="@+id/question_answer_icon"
+            android:src="@drawable/ic_live_help_white"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

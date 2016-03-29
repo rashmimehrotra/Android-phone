@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/topBarLayout"
+                android:background="#2E5880"
+                >
+                <Button
+                    android:id="@+id/menuButton"
+                    android:layout_width="28dp"
+                    android:layout_height="17dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/menuicon"
+                    />
+
+                <Button
+                    android:id="@+id/menuButton1"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    />
+
+                <Button
+                    android:id="@+id/menuBackButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/backbutton"
+                    android:visibility="gone"
+                    />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/course_icon_img1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/menuButton1"
+                    android:layout_marginLeft="15dp"
+                    android:visibility="gone"
+                    />
+                <com.app.learniatstudent.Views.RobotoRegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tob_bar_title"
+                    android:gravity="center|left"
+                    android:text="Student App"
+                    android:textColor="#ffffff"
+                    android:paddingLeft="10dp"
+                    android:textSize="20sp"
+                    android:layout_toRightOf="@+id/course_icon_img1"
+                    />
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/question_dashboard_menuitems"
+                    android:visibility="invisible"
+                    >
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="12dp"
+                        android:id="@+id/question_answer_icon"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_question_answer_white"
+                        />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="12dp"
+                        android:id="@+id/question_help_icon"
+                        android:layout_toLeftOf="@+id/question_answer_icon"
+                        android:src="@drawable/ic_live_help_white"
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/content_frame1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        >
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/bg_pattern"
+            android:fitsSystemWindows="true"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:id="@+id/userImage_layout"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userPhoto_iv"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/seat"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#ffffff"
+                    />
+                <com.app.learniatstudent.Views.RobotoRegularTextView
+                    android:id="@+id/username_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/userPhoto_iv"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|left"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:text=""
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="72dp"
+                    >
+                    <com.app.learniatstudent.Views.RobotoRegularTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:id="@+id/setUpSeating_tv"
+                        android:gravity="center|left"
+                        android:text="Setup Seating"
+                        android:textSize="16sp"
+                        />
+                    <View
+                        android:id="@+id/dummyview1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#CDD4DA"
+                        />
+
+                    <com.app.learniatstudent.Views.RobotoRegularTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:id="@+id/xmppReconnect_tv"
+                        android:gravity="center|left"
+                        android:text="Xmpp Reconnect"
+                        android:textSize="16sp"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#CDD4DA"
+                        />
+
+                    <com.app.learniatstudent.Views.RobotoRegularTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:id="@+id/signOut_tv"
+                        android:gravity="center|left"
+                        android:text="Sign Out"
+                        android:textSize="16sp"
+                        android:textColor="#FF3B30"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#CDD4DA"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
