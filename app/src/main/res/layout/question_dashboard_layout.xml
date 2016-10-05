@@ -47,6 +47,7 @@
             android:id="@+id/questionStatement_layout"
             android:layout_below="@+id/top_layout"
             android:layout_marginTop="30dp"
+            android:visibility="invisible"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -189,6 +190,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:id="@+id/rl_activityAndGrasp"
+            android:visibility="invisible"
             >
 
             <LinearLayout

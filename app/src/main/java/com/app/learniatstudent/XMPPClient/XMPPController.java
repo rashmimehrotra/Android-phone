@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Handler;
 import android.os.StrictMode;
 import android.util.Log;
@@ -21,6 +22,7 @@ import org.jivesoftware.smack.ConnectionConfiguration;
 import org.jivesoftware.smack.ConnectionListener;
 import org.jivesoftware.smack.PacketCollector;
 import org.jivesoftware.smack.PacketListener;
+import org.jivesoftware.smack.Roster;
 import org.jivesoftware.smack.RosterEntry;
 import org.jivesoftware.smack.RosterGroup;
 import org.jivesoftware.smack.XMPPConnection;
@@ -255,6 +257,16 @@ public class XMPPController {
                break;
            case SLConstants.kStudentSentBenchState:
 
+               break;
+           case SLConstants.kAllowVoting:
+               if(bodyObject !=null){
+                   ObservingService.sharedManager(_context).postNotification(SLConstants.kXMPPMsgAllowVoting, bodyObject);
+               }
+           case SLConstants.kTeacherQnASubmitted:
+               if(bodyObject !=null){
+                   ObservingService.sharedManager(_context).postNotification(SLConstants.kXMPPMsgTeacherQnASubmitted, bodyObject);
+               }
+               break;
                default:
 
        }
@@ -277,6 +289,7 @@ public class XMPPController {
             return;
         }
         boolean gr = createGroup(completeAddress);
+//        createGroup(completeAddress);
         if(!gr){
             return;
         }
@@ -318,6 +331,8 @@ public class XMPPController {
         if (connection == null)
             return false;
         try {
+            enableStrictMode();
+            connection.getRoster().setSubscriptionMode(Roster.SubscriptionMode.accept_all);
             connection.getRoster().createGroup(groupName);
             Log.v("Group created : ", groupName);
             return true;
@@ -325,6 +340,29 @@ public class XMPPController {
             e.printStackTrace();
             return false;
         }
+    }
+
+    private static void enableStrictMode() {
+        // strict mode requires API level 9 or later
+        if (Build.VERSION.SDK_INT < 9)
+            return;
+
+        StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+                .detectDiskReads()
+                .detectDiskWrites()
+                .detectNetwork()
+                .penaltyLog()
+                .penaltyFlashScreen()
+                .build());
+
+        StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
+                .detectActivityLeaks()
+                .detectLeakedSqlLiteObjects()
+                .detectLeakedClosableObjects()
+                .detectLeakedRegistrationObjects()
+                .penaltyLog()
+                .build());
+
     }
 
     public void sendMessage(String status) {

@@ -941,6 +941,36 @@ public class CommonUtils {
         }
     }
 
+    public void showQuestionReceivedAlert(String title, String message){
+        try {
+            LayoutInflater li = LayoutInflater.from(currentActivity);
+            View customAlertView = li.inflate(R.layout.custom_alert_layout, null);
+
+
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(currentActivity);
+
+            alertDialogBuilder.setView(customAlertView);
+
+            //final EditText userInput = (EditText) customAlertView.findViewById(R.id.editTextPromptName);
+            final TextView userTextViewTitle = (TextView) customAlertView.findViewById(R.id.tv_alertBox_Title);
+            final TextView userTextViewMessage = (TextView) customAlertView.findViewById(R.id.tv_alertBox_message);
+            userTextViewTitle.setText(title);
+            userTextViewTitle.setGravity(Gravity.CENTER);
+            userTextViewMessage.setText(message);
+            userTextViewMessage.setGravity(Gravity.CENTER);
+            alertDialogBuilder
+                    .setCancelable(false).setNegativeButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            });
+        }
+        catch (Exception e){
+
+        }
+    }
+
     public void showXMPPReConnectPopUp(String title, String message, final Context ctx)
     {
         if(isXMPPReconnectDialogShown){

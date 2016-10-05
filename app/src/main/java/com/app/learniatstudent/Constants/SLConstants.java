@@ -29,6 +29,14 @@ public class SLConstants {
     public static final int kCloseCollaboration = 715;
     public static final int kCreatedRoomName = 722;
     public static final int kStudentSentBenchState = 220;
+    public static final int kAllowVoting = 173;
+    public static final int kQuestionLabel = 170;
+    public static final int kQuestionRoom = 723;
+    public static final int kTeacherHandRaiseInReview = 223;
+    public static final int kShareGraph = 724;
+    public static final int kSendFeedBack = 701;
+    public static final int kStudentQnAAccept = 217;
+    public static final int kStudentSendAnswer = 321;
 
 
 
@@ -38,6 +46,8 @@ public class SLConstants {
     public static String kXMPPMsgSeatChanged = "kxmppmsgseatchanged";
     public static String kXMPPMsgTimeExtended= "kxmppmsgtimeextended";
     public static String kXMPPMsgTeacherEndsSessions= "kxmppmsgteacherendsession";
+    public static String kXMPPMsgAllowVoting= "kxmppmsgallowvoting";
+    public static String kXMPPMsgTeacherQnASubmitted= "kxmppmsgteacherqnasubmitted";
 
 
     // Fonts

@@ -11,4 +11,5 @@
     <color name="enabled_color">#ffffff</color>
     <color name="disabled_color">#CDD4DA</color>
     <color name="window_background">#FFF5F5F5</color>
+    <color name="gray_200">#EEEEEE</color>
 </resources>
